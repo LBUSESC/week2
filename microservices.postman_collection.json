@@ -1,0 +1,95 @@
+{
+	"info": {
+		"_postman_id": "73b71398-f381-483a-99c7-afb506b9a52d",
+		"name": "microservices",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32670938"
+	},
+	"item": [
+		{
+			"name": "student",
+			"item": [
+				{
+					"name": "Get all students",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Student by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Student",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"studentId\" :   \"c101\",\r\n    \"firstName\"  :   \"Satish\",\r\n    \"lastName\"  :   \"Kumar\",\r\n    \"email\" :   \"s.kumar@leedsbeckett.ac.uk\",\r\n    \"qualification\" :   \"PhD\",\r\n    \"university\"    :   \"Leeds Beckett University\"   \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/student/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"student",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Student log request",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\"    : \"c101\",\r\n    \"firstName\"    : \"Aman\",\r\n    \"lastName\"    : \"Kumar\",\r\n    \"email\"    : \"s.kumar@leedsbeckett.ac.uk\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/student/log-request",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"student",
+								"log-request"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
