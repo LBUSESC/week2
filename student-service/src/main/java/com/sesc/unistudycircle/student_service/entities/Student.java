@@ -1,14 +1,14 @@
-package com.sesc.unistudycircle.model;
+package com.sesc.unistudycircle.student_service.entities;
 
-import lombok.*;
+import lombok.Data;
+
 
 @Data
-public class Student {
-    private String studentId;
+public class Student  {
+    private Long studentId;
     private String firstName;
     private String lastName;
     private String email;
     private String qualification;
     private String university;
-
 }

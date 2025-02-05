@@ -15,7 +15,15 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": ""
+							"raw": "http://localhost:8082/student",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"student"
+							]
 						}
 					},
 					"response": []
@@ -26,7 +34,16 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": ""
+							"raw": "http://localhost:8082/student/101",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"student",
+								"101"
+							]
 						}
 					},
 					"response": []
@@ -55,35 +72,6 @@
 							"path": [
 								"student",
 								"create"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Create Student log request",
-					"request": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"id\"    : \"c101\",\r\n    \"firstName\"    : \"Aman\",\r\n    \"lastName\"    : \"Kumar\",\r\n    \"email\"    : \"s.kumar@leedsbeckett.ac.uk\"\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "http://localhost:8080/student/log-request",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "8080",
-							"path": [
-								"student",
-								"log-request"
 							]
 						}
 					},

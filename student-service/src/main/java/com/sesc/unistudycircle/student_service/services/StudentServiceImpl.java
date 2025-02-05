@@ -1,31 +1,28 @@
-package com.sesc.unistudycircle.service;
-
-import com.sesc.unistudycircle.model.Student;
+package com.sesc.unistudycircle.student_service.services;
+import com.sesc.unistudycircle.student_service.entities.Student;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
 
 @Service
-public class StudentServiceImp implements StudentService {
-
+public class StudentServiceImpl implements StudentService {
 
     List<Student> students = new ArrayList<Student>();
 
-    public Student addStudent(Student student) {
+    @Override
+    public Student saveStudent(Student student) {
         students.add(student);
         return student;
     }
 
-    public Student getStudentById(String studentId) {
-
+    @Override
+    public Student getStudentById(long studentId) {
         return students.stream().filter(student -> student
                 .getStudentId().equals(studentId)).findFirst().get();
     }
 
     public List<Student> getAllStudents() {
-        return students;
+       return students;
     }
-
 }
-
